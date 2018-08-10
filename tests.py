@@ -1,3 +1,4 @@
-arr = [1,2,3]
-for i in range(len(arr),-1,-1):
-	print(i)
+a = [1, 2]
+b = [3, 5]
+
+print(a * b)

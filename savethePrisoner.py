@@ -1,17 +1,9 @@
-def sum(n):
-    if n<=1:
-        return 1
-    else:
-        return sum(n-1)+n
-
-
 def saveThePrisoner(n, m, s):
-    m = sum(m//n)
-    for i in range(1,m+1):
-        s = s+1
-        if s>n:
-            s=1
-    return s
+    x=s-1+m
+    if (x%n)==0:
+        return n
+    else:
+        return x%n
 
 
 
