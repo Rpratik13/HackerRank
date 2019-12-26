@@ -1,11 +1,11 @@
 def factorial(n):
-	if n == 1:
+	if n < 2:
 		return 1;
 	return n * factorial(n-1);
 
 def factorialDigitSum(n):
 	sm = 0;
-	while (n != 0):
+	while n:
 		sm += (n % 10);
 		n //= 10;
 	return sm;

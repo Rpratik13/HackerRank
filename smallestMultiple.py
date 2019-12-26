@@ -1,27 +1,12 @@
-def factorial(n):
-	if n==1:
-		return 1
-	else:
-		return factorial(n-1)*n
-
-
 def largestMultiple(n):
-	max1 = factorial(n)
-	t=n
-
-	while t<=max1:
-		a = 1
-		count = 0
-		while a <= n:
-			if t%a==0:
-				count+=1
-			a+=1
-			
-		if count == n:
-			return t
-
-		t = t+n
-
+	if n < 2:
+		return n
+	ans = inc = n * (n - 1)
+	for num in range(n - 1, 1, -1):
+		while ans % num != 0:
+			ans += inc
+		inc = ans
+	return ans
 
 
 t = int(input().strip())

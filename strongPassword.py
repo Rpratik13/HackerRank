@@ -8,7 +8,7 @@ def special(pw):
 	return False;
 
 def minimumNumber(n,pw):
-	u=l=n=s=0;	
+	u = l = n = s = 0;	
 	for i in range(len(pw)):
 		if pw[i].isupper():
 			u = 1;
