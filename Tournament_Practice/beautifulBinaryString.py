@@ -3,7 +3,6 @@ def beautifulBinaryString(n, s):
 	for i in range(n - 2):
 		if s[i:i + 3] == '010':
 			s = str(int(s) + (10 ** (n - i - 3)))
-			print(s)
 			s = (n - len(s)) * '0' + s
 			count += 1
 
