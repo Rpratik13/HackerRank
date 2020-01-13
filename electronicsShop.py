@@ -1,17 +1,17 @@
 def getMoneySpent(keyboards, drives, b):
-        max1 = 0
-        min1 = keyboards[0]+drives[0]
+        mx = 0
+        mn = keyboards[0] + drives[0]
         for i in keyboards:
             for j in drives:
-                if (i+j)>max1 and (i+j)<=b:
-                    max1 = i+j
-                if (i+j)<min1:
-                    min1 = i+j
+                if (i + j) <= b:
+                    mx = max(mx, i + j)
+                
+                mn = min(mn, i + j)
 
-        if min1 > b:
+        if mn > b:
             return -1
         
-        return (max1)
+        return mx
 
 bnm = input().split()
 
