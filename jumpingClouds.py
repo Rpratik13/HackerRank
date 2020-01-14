@@ -2,14 +2,14 @@ def jumpingOnClouds(c, k):
 	e = 100
 	i = 0
 	check = True
-	while(i!=0 or check):
-		i = (i+k)%(len(c))
-		if c[i]==0:
+	while(i != 0 or check):
+		i = (i + k) % len(c)
+		if c[i]:
+			e -= 3
+		else:
 			e -= 1
-		elif c[i] == 1:
-			e-=3
 
-		if i==0:
+		if i == 0:
 			check = False
 	return e
 
