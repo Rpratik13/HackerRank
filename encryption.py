@@ -2,30 +2,28 @@ from math import sqrt,ceil,floor
 
 
 def encryption(s):
-	s = s.replace(' ','');
-	row = floor(sqrt(len(s)));
-	col = ceil(sqrt(len(s)));
+	s = s.replace(' ','')
+	row = floor(sqrt(len(s)))
+	col = ceil(sqrt(len(s)))
 
-	if((row*col)<len(s)):
-		row = col;
-	print(row);
-	print(col);
-	ans = ""
+	if ((row * col) < len(s)):
+		row = col
+	ans = str()
 
-	i = 0;
+	i = int()
 	
-	while(i<col):
-		j = i;
-		while(j<=len(s)-1):
-			ans = ans + s[j];
-			j = j + col;
-		ans = ans + " ";
-		i+=1;
-	return ans;
+	while(i < col):
+		j = i
+		while(j <= len(s) - 1):
+			ans += s[j]
+			j += col
+		ans += " "
+		i += 1
+	return ans
 
 
-s = input();
+s = input()
 
-result = encryption(s);
+result = encryption(s)
 
-print(result);
+print(result)
