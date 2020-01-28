@@ -1,16 +1,12 @@
 def checkPangram(s):
-	check = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-	ans = []
+	check = [False] * 26
 
 	for i in range(len(s)):
-		if s[i] in ans:
-			continue
-
 		if s[i].isalpha():
-			ans.append(s[i]);
+			check[ord(s[i]) - 97] = True
 
-	ans.sort()
-	if ans==check:
+
+	if all(check):
 		return "pangram"
 	else:
 		return "not pangram"
