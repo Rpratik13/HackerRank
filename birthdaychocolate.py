@@ -1,13 +1,13 @@
-def solve(s,d,m):
-	i=0
-	count=0
-	while i < len(s)-m+1:
-		sum1=0
-		for j in range(0,m):
-			sum1 += s[i+j]
-		if sum1 == d:
-			count+=1
-			i+=1
+def solve(s, d, m):
+	i = 0
+	count = 0
+	while i <= len(s) - m:
+		sm = 0
+		for j in range(0, m):
+			sm += s[i + j]
+		if sm == d:
+			count += 1
+			i += 1
 	return count
 
 
